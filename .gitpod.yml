@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: Android Appetize info
-    # Gitpod is not able to run emulators within a worspace at this stage as
+    # Gitpod is not able to run emulators within a workspace at this stage as
     # Google Kubernetes Engine does not support Nested Virtualization.
     #
     # If running Gitpod on your own infrastructure or via the Dockerfile locally
@@ -84,3 +84,4 @@ ports:
 vscode:
   extensions:
     - dart-code.flutter
+    - dart-code.dart-code
