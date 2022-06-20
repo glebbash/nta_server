@@ -19,3 +19,5 @@ jobs:
     - run: npm i -g semantic-release @semantic-release/git
   
     - run: npx semantic-release
+      with:
+        GITHUB_TOKEN: ${{secrets.PAT}}
