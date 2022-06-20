@@ -1,4 +1,4 @@
-# nta-server
+# nta_server
 
 ## Next Steps
 
