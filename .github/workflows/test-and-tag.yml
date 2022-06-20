@@ -15,8 +15,8 @@ jobs:
     - run: flutter pub get
     - run: flutter test
 
-    - name: Setup Node
-      uses: actions/setup-node@v2
-
+    - uses: actions/setup-node@v2
     - run: cp .github/package.json package.json
+    - run: npm i
+
     - run: npx semantic-release
