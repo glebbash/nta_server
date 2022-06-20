@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-and-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: subosito/flutter-action@v2
+      with:
+          channel: 'stable'
+    - run: flutter pub get
+    - run: flutter test
+
+    - uses: actions/setup-node@v2
+    - run: npm i -g semantic-release @semantic-release/git
+  
+    - run: npx semantic-release
