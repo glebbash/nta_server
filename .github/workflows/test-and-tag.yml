@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        token: ${{secrets.PAT}}
 
     - uses: subosito/flutter-action@v2
       with:
@@ -19,5 +21,3 @@ jobs:
     - run: npm i -g semantic-release @semantic-release/git
   
     - run: npx semantic-release
-      env:
-        GITHUB_TOKEN: ${{secrets.PAT}}
